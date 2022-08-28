@@ -7,9 +7,7 @@ calculateBill()
 increasePeople()
 decreasePeople()
 
-These functions are hard coded in the HTML. So, you can't change their names.
-
-These are all the DIV ID's you're gonna need access to 👇
+These are all the DIV ID's 👇
 ========================================================
 #1 ID 👉 'billTotalInput' = User input for bill total
 #2 ID 👉 'tipInput' = User input for tip
@@ -17,7 +15,7 @@ These are all the DIV ID's you're gonna need access to 👇
 #4 ID 👉 'perPersonTotal' = Total dollar value owed per person
 */
 
-// Get global access to all inputs / divs here (you'll need them later 😘)
+// Getting global access to all inputs / divs here 
 const billInput = document.getElementById('billTotalInput');
 const tipInput = document.getElementById('tipInput');
 const numberOfPeopleDiv = document.getElementById('numberOfPeople');
@@ -32,24 +30,24 @@ let numberOfPeople = Number(numberOfPeopleDiv.innerText)
 const calculateBill = () => {
     // get bill from user input & convert it into a number
     const bill = Number(billInput.value)
-    //  console.log(bill);
+    
 
-    // get the tip from user & convert it into a percentage (divide by 100)
+    // get the tip from user & convert it into a percentage 
     const tipPercentage = Number(tipInput.value) / 100;
-    // console.log(tipPercentage);
+    
 
     // get the total tip amount
     const totalTipAmount = bill * tipPercentage
-    // console.log(totalTipAmount);
+   
 
 
     // calculate the total (tip amount + bill)
     const total = totalTipAmount + bill
-    // console.log(total);
+   
 
     // calculate the per person total (total divided by number of people)
     const perPersonTotal = (total / numberOfPeople)
-    //   console.log(perPersonTotal);
+    
 
 
     // update the perPersonTotal on DOM & show it to user
